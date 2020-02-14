@@ -38,7 +38,14 @@ class orderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        User::create([
+            'no_meja'=>$request->no_meja,
+            'tanggal'=>$request->tanggal,
+            'keterangan'=>$keterangan,
+            'status_order'=>$request->status_order,
+        ]);
+
+        return redirect()->back();
     }
 
     /**

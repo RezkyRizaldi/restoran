@@ -43,7 +43,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header bg-warning o-hidden h-100 text-light">
-            <div class="tambah-masakan-icon">
+            <div class="tambah-modal-icon">
               <i class="fad fa-fw fa-burger-soda"></i>
             </div>
             <h3 class="modal-title">Tambah Data Masakan</h3>
@@ -84,7 +84,10 @@
     <div class="modal fade" role="dialog" id="ubah">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header bg-warning o-hidden h-100 text-light">
+            <div class="tambah-modal-icon">
+              <i class="fad fa-fw fa-burger-soda"></i>
+            </div>
             <h3 class="modal-title">Ubah Data Masakan</h3>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
@@ -185,16 +188,16 @@
                 <a class="js-arrow" href="#" style="text-decoration: none;"><i class="fad fa-table"></i>Tabel<span class="arrow float-right"><i class="fad fa-angle-down"></i></span></a>
                 <ul class="list-unstyled navbar__sub-list js-sub-list">
                   <li class="active">
-                    <a href="#" style="text-decoration: none;"><i class="fad fa-burger-soda"></i>Masakan</a>
+                    <a href="#" style="text-decoration: none;"><i class="fad fa-burger-soda text-warning"></i>Masakan</a>
                   </li>
                   <li>
-                    <a href="/order" style="text-decoration: none;"><i class="fad fa-shopping-cart"></i>Order</a>
+                    <a href="/order" style="text-decoration: none;"><i class="fad fa-shopping-cart text-success"></i>Order</a>
                   </li>
                   <li>
-                    <a href="/transaksi" style="text-decoration: none;"><i class="fad fa-cash-register"></i>Transaksi</a>
+                    <a href="/transaksi" style="text-decoration: none;"><i class="fad fa-cash-register text-danger"></i>Transaksi</a>
                   </li>
                   <li>
-                    <a href="/user" style="text-decoration: none;"><i class="fad fa-user"></i>User</a>
+                    <a href="/user" style="text-decoration: none;"><i class="fad fa-user text-primary"></i>User</a>
                   </li>
                 </ul>
               </li>

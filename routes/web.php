@@ -25,6 +25,8 @@ Route::post('/tambah_masakan', 'admin\masakanController@store')->name('tambah_ma
 
 Route::get('/order', 'admin\orderController@index');
 
+Route::post('/tambah_order', 'admin\orderController@store')->name('tambah_order');
+
 Route::get('/transaksi', 'admin\transaksiController@index');
 
 Route::get('/user', 'admin\userController@index');

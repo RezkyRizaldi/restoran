@@ -42,9 +42,12 @@
     <div class="modal fade" role="dialog" id="tambah">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header bg-danger o-hidden h-100 text-light">
+            <div class="tambah-modal-icon">
+              <i class="fad fa-fw fa-cash-register"></i>
+            </div>
             <h3 class="modal-title">Tambah Data Transaksi</h3>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
           </div>
           <div class="modal-body">
             <form action="data-siswa/tambah_datasiswa.php" method="post">
@@ -53,8 +56,8 @@
                 <input type="text" name="nama_pelanggan" class="form-control" placeholder="Masukkan Nama Pelanggan" autofocus="" autocomplete="off">
               </div>
               <div class="form-group">
-                <label for="makanan">Nama Makanan</label>
-                <input type="text" name="makanan" class="form-control" placeholder="Masukkan Nama Makanan" autofocus="" autocomplete="off">
+                <label for="masakan">Nama Masakan</label>
+                <input type="text" name="masakan" class="form-control" placeholder="Masukkan Nama Masakan" autofocus="" autocomplete="off">
               </div>
               <div class="form-group">
                 <label for="total">Total Bayar</label>
@@ -84,9 +87,12 @@
     <div class="modal fade" role="dialog" id="selesai">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
+           <div class="modal-header bg-danger o-hidden h-100 text-light">
+            <div class="tambah-modal-icon">
+              <i class="fad fa-fw fa-cash-register"></i>
+            </div>
             <h3 class="modal-title">Data Transaksi</h3>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
           </div>
           <div class="modal-body">
             <form action="data-siswa/tambah_datasiswa.php" method="post">
@@ -97,9 +103,9 @@
                 </div>
               </div>
               <div class="form-group row">
-                <label for="makanan" class="col-sm-2 col-form-label">Nama Makanan: </label>
+                <label for="masakan" class="col-sm-2 col-form-label">Nama Masakan: </label>
                 <div class="col-sm-10">
-                  <input type="text" readonly class="form-control-plaintext" id="makanan" value="Seblak">
+                  <input type="text" readonly class="form-control-plaintext" id="masakan" value="Seblak">
                 </div>
               </div>
               <div class="form-group row">
@@ -121,7 +127,7 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <input type="submit" name="submit" class="btn btn-success" value="Simpan">
+                <input onclick="return confirm('Anda yakin untuk memesan ini?');" type="submit" name="submit" class="btn btn-success" value="Mulai Transaksi">
               </div>
             </form>
           </div>
@@ -154,7 +160,7 @@
                 <a href="chart.html"><i class="fad fa-chart-bar"></i>User</a>
               </li>
               <li>
-                <a href="table.html"><i class="fad fa-table"></i>Makanan</a>
+                <a href="table.html"><i class="fad fa-table"></i>Masakan</a>
               </li>
               <li>
                 <a href="form.html"><i class="fad fa-check-square"></i>Order</a>
@@ -195,16 +201,16 @@
                 <a class="js-arrow" href="#" style="text-decoration: none;"><i class="fad fa-table"></i>Tabel<span class="arrow float-right"><i class="fad fa-angle-down"></i></span></a>
                 <ul class="list-unstyled navbar__sub-list js-sub-list">
                   <li>
-                    <a href="/makanan" style="text-decoration: none;"><i class="fad fa-burger-soda"></i>Makanan</a>
+                    <a href="/masakan" style="text-decoration: none;"><i class="fad fa-burger-soda text-warning"></i>Masakan</a>
                   </li>
                   <li>
-                    <a href="/order" style="text-decoration: none;"><i class="fad fa-shopping-cart"></i>Order</a>
+                    <a href="/order" style="text-decoration: none;"><i class="fad fa-shopping-cart text-success"></i>Order</a>
                   </li>
                   <li class="active">
-                    <a href="#" style="text-decoration: none;"><i class="fad fa-cash-register"></i>Transaksi</a>
+                    <a href="#" style="text-decoration: none;"><i class="fad fa-cash-register text-danger"></i>Transaksi</a>
                   </li>
                   <li>
-                    <a href="/user" style="text-decoration: none;"><i class="fad fa-user"></i>User</a>
+                    <a href="/user" style="text-decoration: none;"><i class="fad fa-user text-primary"></i>User</a>
                   </li>
                 </ul>
               </li>
@@ -281,7 +287,7 @@
                 </div>
                 <div class="col-lg">
                   <div class="d-flex justify-content-center">
-                    <a class="btn btn-sm btn-secondary" href="#tambah" data-toggle="modal" data-target="#tambah" style="padding: 7px 21px; font-size: 10px;"><i class="fad fa-plus-circle mr-2"></i>Tambah Data</a>
+                    <a class="btn btn-sm btn-success" href="#tambah" data-toggle="modal" data-target="#tambah" style="padding: 7px 21px; font-size: 10px;"><i class="fad fa-plus-circle mr-2"></i>Tambah Data</a>
                   </div>
                 </div>
               </div>
@@ -318,7 +324,7 @@
                       <td>{{ $t -> total_bayar }}</td>
                       <td>belum bayar</td>
                       <td>
-                        <a href="#selesai" data-toggle="modal" data-target="#selesai" onclick="return confirm('Anda yakin untuk memesan ini?');" class="btn btn-primary" title="Checkout"><i class="fad fa-money-check-alt"></i></a>
+                        <a href="#selesai" data-toggle="modal" data-target="#selesai" class="btn btn-primary" title="Checkout"><i class="fad fa-money-check-alt"></i></a>
                       </td>
                     </tr>
                     @endforeach

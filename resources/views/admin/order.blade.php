@@ -42,33 +42,35 @@
     <div class="modal fade" role="dialog" id="tambah">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header bg-success o-hidden h-100 text-light">
+            <div class="tambah-modal-icon">
+              <i class="fad fa-fw fa-shopping-cart"></i>
+            </div>
             <h3 class="modal-title">Tambah Data Order</h3>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
           </div>
           <div class="modal-body">
-            <form action="data-siswa/tambah_datasiswa.php" method="post">
+            <form action="{{ route('tambah_order') }}" method="post">
               <div class="form-group">
-                <label for="nomeja">Nomor Meja</label>
-                <input type="text" name="nomeja" class="form-control" placeholder="" autofocus="" autocomplete="off" readonly disabled>
+                <label for="no_meja">Nomor Meja</label>
+                <input type="text" name="no_meja" class="form-control" placeholder="" autofocus="" autocomplete="off">
               </div>
               <div class="form-group">
-                <label for="makanan">Nama Makanan</label>
-                <input type="text" name="makanan" class="form-control" placeholder="Masukkan Nama Makanan" autofocus="" autocomplete="off">
-              </div>
-              <div class="form-group">
-                <label for="harga">Harga Makanan</label>
-                <input type="text" name="harga" class="form-control" placeholder="Masukkan Harga Makanan" autocomplete="off">
-              </div>
-              <div class="form-group">
-                <label for="jumlah">Jumlah Makanan</label>
-                <input type="text" name="jumlah" class="form-control" placeholder="Masukkan Jumlah Makanan" autocomplete="off">
+                <label for="tanggal">Tanggal</label>
+                <input type="text" name="tanggal" class="form-control" placeholder="Masukkan Tanggal" autofocus="" autocomplete="off">
               </div>
               <div class="form-group">
                 <label for="keterangan">Keterangan</label>
                 <select class="form-control" required="required" name="keteranga">
                   <option value="Pedas">Pedas</option>
                   <option value="Asin">Asin</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="status_order">Status Order</label>
+                <select class="form-control" required="required" name="status_order">
+                  <option value="Terkirim">Terkirim</option>
+                  <option value="Pending">Pending</option>
                 </select>
               </div>
               <div class="modal-footer">
@@ -84,33 +86,35 @@
     <div class="modal fade" role="dialog" id="ubah">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header bg-success o-hidden h-100 text-light">
+            <div class="tambah-modal-icon">
+              <i class="fad fa-fw fa-shopping-cart"></i>
+            </div>
             <h3 class="modal-title">Ubah Data Order</h3>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
           </div>
           <div class="modal-body">
             <form action="data-siswa/tambah_datasiswa.php" method="post">
               <div class="form-group">
                 <label for="nomeja">Nomor Meja</label>
-                <input type="text" name="nomeja" class="form-control" placeholder="" autofocus="" autocomplete="off" readonly disabled>
+                <input type="text" name="nomeja" class="form-control" placeholder="" autofocus="" autocomplete="off">
               </div>
               <div class="form-group">
-                <label for="makanan">Nama Makanan</label>
-                <input type="text" name="makanan" class="form-control" placeholder="Masukkan Nama Makanan" autofocus="" autocomplete="off">
-              </div>
-              <div class="form-group">
-                <label for="harga">Harga Makanan</label>
-                <input type="text" name="harga" class="form-control" placeholder="Masukkan Harga Makanan" autocomplete="off">
-              </div>
-              <div class="form-group">
-                <label for="jumlah">Jumlah Makanan</label>
-                <input type="text" name="jumlah" class="form-control" placeholder="Masukkan Jumlah Makanan" autocomplete="off">
+                <label for="tanggal">Tanggal</label>
+                <input type="text" name="tanggal" class="form-control" placeholder="Masukkan Tanggal" autofocus="" autocomplete="off">
               </div>
               <div class="form-group">
                 <label for="keterangan">Keterangan</label>
-                <select class="form-control" required="required" name="keteranga">
+                <select class="form-control" required="required" name="keterangan">
                   <option value="Pedas">Pedas</option>
                   <option value="Asin">Asin</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="status_order">status Order Makanan</label>
+                <select class="form-control" required="required" name="status_order">
+                  <option value="Terkirim">Terkirim</option>
+                  <option value="Pending">Pending</option>
                 </select>
               </div>
               <div class="modal-footer">
@@ -188,16 +192,16 @@
                 <a class="js-arrow" href="#" style="text-decoration: none;"><i class="fad fa-table"></i>Tabel<span class="arrow float-right"><i class="fad fa-angle-down"></i></span></a>
                 <ul class="list-unstyled navbar__sub-list js-sub-list">
                   <li>
-                    <a href="/makanan" style="text-decoration: none;"><i class="fad fa-burger-soda"></i>Makanan</a>
+                    <a href="/makanan" style="text-decoration: none;"><i class="fad fa-burger-soda text-warning"></i>Makanan</a>
                   </li>
                   <li class="active">
-                    <a href="#" style="text-decoration: none;"><i class="fad fa-shopping-cart"></i>Order</a>
+                    <a href="#" style="text-decoration: none;"><i class="fad fa-shopping-cart text-success"></i>Order</a>
                   </li>
                   <li>
-                    <a href="/transaksi" style="text-decoration: none;"><i class="fad fa-cash-register"></i>Transaksi</a>
+                    <a href="/transaksi" style="text-decoration: none;"><i class="fad fa-cash-register text-danger"></i>Transaksi</a>
                   </li>
                   <li>
-                    <a href="/user" style="text-decoration: none;"><i class="fad fa-user"></i>User</a>
+                    <a href="/user" style="text-decoration: none;"><i class="fad fa-user text-primary"></i>User</a>
                   </li>
                 </ul>
               </li>
@@ -274,7 +278,7 @@
                 </div>
                 <div class="col-lg">
                   <div class="d-flex justify-content-center">
-                    <a class="btn btn-sm btn-secondary" href="#tambah" data-toggle="modal" data-target="#tambah" style="padding: 7px 21px; font-size: 10px;"><i class="fad fa-plus-circle mr-2"></i>Tambah Data</a>
+                    <a class="btn btn-sm btn-success" href="#tambah" data-toggle="modal" data-target="#tambah" style="padding: 7px 21px; font-size: 10px;"><i class="fad fa-plus-circle mr-2"></i>Tambah Data</a>
                   </div>
                 </div>
               </div>

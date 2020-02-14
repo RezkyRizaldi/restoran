@@ -42,9 +42,12 @@
     <div class="modal fade" role="dialog" id="tambah">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header bg-primary o-hidden h-100 text-light">
+            <div class="tambah-modal-icon">
+              <i class="fad fa-fw fa-users"></i>
+            </div>
             <h3 class="modal-title">Tambah Data User</h3>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
           </div>
           <div class="modal-body">
             <form action="{{ route('tambah_user') }}" method="POST">
@@ -82,9 +85,12 @@
     <div class="modal fade" role="dialog" id="ubah">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header bg-primary o-hidden h-100 text-light">
+            <div class="tambah-modal-icon">
+              <i class="fad fa-fw fa-users"></i>
+            </div>
             <h3 class="modal-title">Ubah Data User</h3>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
           </div>
           <div class="modal-body">
             <form action="" method="POST">
@@ -181,16 +187,16 @@
                 <a class="js-arrow" href="#" style="text-decoration: none;"><i class="fad fa-table"></i>Tabel<span class="arrow float-right"><i class="fad fa-angle-down"></i></span></a>
                 <ul class="list-unstyled navbar__sub-list js-sub-list">
                   <li>
-                    <a href="/makanan" style="text-decoration: none;"><i class="fad fa-burger-soda"></i>Makanan</a>
+                    <a href="/makanan" style="text-decoration: none;"><i class="fad fa-burger-soda text-warning"></i>Makanan</a>
                   </li>
                   <li>
-                    <a href="/order" style="text-decoration: none;"><i class="fad fa-shopping-cart"></i>Order</a>
+                    <a href="/order" style="text-decoration: none;"><i class="fad fa-shopping-cart text-success"></i>Order</a>
                   </li>
                   <li>
-                    <a href="/transaksi" style="text-decoration: none;"><i class="fad fa-cash-register"></i>Transaksi</a>
+                    <a href="/transaksi" style="text-decoration: none;"><i class="fad fa-cash-register text-danger"></i>Transaksi</a>
                   </li>
                   <li class="active">
-                    <a href="#" style="text-decoration: none;"><i class="fad fa-user"></i>User</a>
+                    <a href="#" style="text-decoration: none;"><i class="fad fa-user text-primary"></i>User</a>
                   </li>
                 </ul>
               </li>
@@ -267,7 +273,7 @@
                 </div>
                 <div class="col-lg">
                   <div class="d-flex justify-content-center">
-                    <a class="btn btn-sm btn-secondary" href="#tambah" data-toggle="modal" data-target="#tambah" style="padding: 7px 21px; font-size: 10px;"><i class="fad fa-plus-circle mr-2"></i>Tambah Data</a>
+                    <a class="btn btn-sm btn-success" href="#tambah" data-toggle="modal" data-target="#tambah" style="padding: 7px 21px; font-size: 10px;"><i class="fad fa-plus-circle mr-2"></i>Tambah Data</a>
                   </div>
                 </div>
               </div>

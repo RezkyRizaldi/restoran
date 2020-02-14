@@ -162,16 +162,16 @@
                 <a class="js-arrow" href="#" style="text-decoration: none;"><i class="fad fa-table"></i>Tabel<span class="arrow float-right"><i class="fad fa-angle-down"></i></span></a>
                 <ul class="list-unstyled navbar__sub-list js-sub-list">
                   <li>
-                    <a href="/masakan" style="text-decoration: none;"><i class="fad fa-burger-soda"></i>Masakan</a>
+                    <a href="/masakan" style="text-decoration: none;"><i class="fad fa-burger-soda text-warning"></i>Masakan</a>
                   </li>
                   <li>
-                    <a href="/order" style="text-decoration: none;"><i class="fad fa-shopping-cart"></i>Order</a>
+                    <a href="/order" style="text-decoration: none;"><i class="fad fa-shopping-cart text-success"></i>Order</a>
                   </li>
                   <li>
-                    <a href="/transaksi" style="text-decoration: none;"><i class="fad fa-cash-register"></i>Transaksi</a>
+                    <a href="/transaksi" style="text-decoration: none;"><i class="fad fa-cash-register text-danger"></i>Transaksi</a>
                   </li>
                   <li>
-                    <a href="/user" style="text-decoration: none;"><i class="fad fa-user"></i>User</a>
+                    <a href="/user" style="text-decoration: none;"><i class="fad fa-user text-primary"></i>User</a>
                   </li>
                 </ul>
               </li>
